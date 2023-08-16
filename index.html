@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div id="loginLogoutContainer">
+            <div id="loginStatus" style="display: none;">
+                <h1>Anonymous Sign-In Example</h1>
+                <p>You are not logged in.</p>
+                <button id="anonymousSignInBtn">Sign In Anonymously</button>
+            </div>
+            <div id="logout" style="display: none;">
+                <p>You are logged in anonymously.</p>
+                <button id="logoutBtn">Log Out</button>
+            </div>
+        </div>
+    </nav>
+
+    <main>        
+        <div id="imageUpload">
+            <h2>Upload Images</h2>
+            <input type="file" id="imageInput" accept="image/*" multiple>
+            <button id="uploadBtn">Upload</button>
+        </div>
+
+        <div id="imageDisplay" style="display: none;">
+            <h2>Image and User ID</h2>
+            <ul id="uploadedImagesList"></ul>
+            <p id="userID">User ID: </p>
+        </div>
+    </main>
+
+    <script src="js/script.js" type="module"></script>
+    <script src="js/config.js" type="module"></script>
+    <script src="js/app.js" type="module"></script>
+</body>
+</html>
