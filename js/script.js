@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-//Firebase storage image upload funtion :)
+//Firebase storage image upload funtion :) 🥹
 document.getElementById("uploadBtn").addEventListener("click", async function () {
   var imageInput = document.getElementById("imageInput");
   // var uploadedImagesList = document.getElementById("uploadedImagesList");
@@ -146,7 +146,7 @@ async function getCurrentUser() {
 
 
 
-// Function to delete images older than 5 hours
+// Function to delete images older than 2 hours
 async function deleteOldImagesFromStorage() {
   const imagesRef = ref(storage, "meme/");
   const dbTimestampRef = dbRef(database, "images/");
@@ -165,7 +165,7 @@ async function deleteOldImagesFromStorage() {
           console.log("Timestamp:", imageInfo.timestamp);
           // Calculate the time difference in milliseconds
           const timeDifference = currentTime - imageInfo.timestamp;
-          if (timeDifference >= 20000) {
+          if (timeDifference >= 7200000) {
             const imageRefToDelete = ref(imagesRef, imageInfo.fileName);
             // Remove the image node if the condition is met
             await deleteObject(imageRefToDelete);
@@ -188,12 +188,12 @@ const ct=Date.now();
 console.log(ct)
 // // Call the async function to delete images
 setInterval(() => {
-  deleteOldImagesFromStorage();
-}, 20000);
+  deleteOldImagesFromStorage();refreshPageAfterDelay(); //rel 2hrs
+}, 7200000);
 
 
 
-// Function to delete images older than 5 hours
+// Function to delete images older than 2hrs and 30 sec hours
 
 async function deleteImageFromDB() {
   const imagesRef = dbRef(database, "images/");
@@ -216,7 +216,7 @@ async function deleteImageFromDB() {
           const timeDifference = currentTime - imageInfo.timestamp;
 
          
-          if (timeDifference >= 20000) {
+          if (timeDifference >= 7230000 ) {
 
             const imageRefToDelete = child(imagesRef, imageKey);
 
@@ -239,8 +239,8 @@ async function deleteImageFromDB() {
 
 
 setInterval(() => {
-  deleteImageFromDB();
-}, 20000);
+  deleteImageFromDB(); refreshPageAfterDelay(); //rel 2hrs
+}, 7230000 );
 
 
 function refreshPageAfterDelay() {

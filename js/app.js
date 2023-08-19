@@ -3,7 +3,7 @@ import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.1.0/firebase
 import { getAuth, signInAnonymously,EmailAuthProvider,onAuthStateChanged,linkWithCredential ,signOut } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-auth.js";
 import { getStorage ,deleteObject , ref, uploadBytes, getDownloadURL,getMetadata,listAll  } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-storage.js";
 import {getDatabase, ref as dbRef, push ,get,onValue,remove,child} from "https://www.gstatic.com/firebasejs/10.1.0/firebase-database.js";
-import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.1.0/firebase-app-check.js"
+
 import { config } from './config.js';
 const firebaseConfig = {
     apiKey:config.apiKey,
