@@ -244,7 +244,7 @@ setInterval(() => {
 
 
 function refreshPageAfterDelay() {
-  location.reload(true);
+  location.reload(false);
 }
 
 setInterval(() => {
