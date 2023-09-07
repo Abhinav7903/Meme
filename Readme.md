@@ -1,4 +1,4 @@
-### <a href="https://abhinav7903.github.io/Meme/" target="_blank">Visit W3Schools</a>
+### <a href="https://abhinav7903.github.io/Meme/" target="_blank">Demo</a>
 
 # Firebase Image Upload and Management README
 
